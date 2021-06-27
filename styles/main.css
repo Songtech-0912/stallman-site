@@ -1,0 +1,242 @@
+/* Sass (SCSS) stylesheets for Stallman site design */
+
+/* Globals */
+@import url('https://rsms.me/inter/inter.css');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default style resets */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utility classes */
+.m-auto {
+    margin: auto
+}
+
+.flex-center {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sr-only {
+    /* (screenreader only) */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Colors */
+
+.bg-black {
+    background-color: #151515;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-secondary {
+    background-color: #1E1E1E;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-accent {
+    color: #76EDED;
+}
+
+.text-primary {
+    color: #CFCFCF;
+}
+
+a {
+    color: #3291FF;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+details {
+    font-size: 1.2rem;
+}
+
+.disclaimer-text {
+    font-size: 1rem;
+    line-height: 1.375;
+}
+
+/* Forms */
+
+ul {
+    padding-left: 2rem;
+}
+
+li {
+}
+
+/* Sizes & Spaces */
+
+.s-full {
+    width: 100%;
+    height: 100%;
+}
+
+.margin-0\.5-y {
+    margin: 0.5rem 0;
+}
+
+.margin-0\.7-y {
+    margin: 0.7rem 0;
+}
+
+.margin-1-y {
+    margin: 1rem 0;
+}
+
+.margin-1\.5-y {
+    margin: 1.5rem 0;
+}
+
+/* Alignments */
+.text-left {
+    text-align: left;
+}
+
+/* Dividers */
+.border-xy {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.divider-r {
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.text-hrule {
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Layouts */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sidebar {
+    display: flex;
+    /* Don't grow, do shrink, width = 25% */
+    flex: 0 1 25%;
+    flex-direction: column;
+    /* Keep things to center,
+     * this avoids the need to do
+     * a lot of media queries to
+     * adjust padding values */
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 80%;
+    height: 80%;
+}
+
+.sidebar-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.content {
+    display: flex;
+    flex: 1 1; /* Do shrink, grow to occupy remaining space */
+    overflow-y: scroll;
+}
+
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin-top: 5rem;
+}
+
+.sidebar-searchbar {
+    display: block;
+    max-width: inherit;
+}
+
+input[type="text"] {
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: transparent;
+    box-shadow: inset 0 -1px 0 #FFFFFF;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+    opacity: 0.8
+}
+.content-articles-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-pins-card {
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+
+.article-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
